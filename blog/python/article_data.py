@@ -17,7 +17,7 @@ article_dict = {
         "paragraph_2": "Med ett stort utbud av lockande smaker finns det något för alla smaklökar. Oavsett om du gillar fruktiga, svalkande eller krämiga smaker, har Elf Bar något som passar just dig. Utforska vårt sortiment och hitta din favorit!",
         "heading_3": "Beställ hos oss idag",
         "paragraph_3": "Att beställa din Elf Bar hos oss är enkelt. Besök vår hemsida och välj bland vårt utbud av Elf Bar-produkter. Med snabba leveransalternativ får du snart möjlighet att njuta av denna internationella vaping-sensation direkt i din hand.",
-        "link_3": "//engangsvapes.html",
+        "link_3": "../../engangsvapes.html",
         "link_3_text": "Kika på våra Elf Bar och andra engångsvapes här",
         "date": "10 aug, 2023",
 
@@ -60,7 +60,7 @@ article_dict = {
         "heading_4": "Vindruva",
         "paragraph_4": "Denna fruktiga och saftiga druvsmak erbjuder en explosion av smak i varje drag. Som att tugga på en sval och saftig druvklase ger den en kombination av sötma och syrlighet som tillfredsställer dina smaklökar.",
         "paragraph_5": "Dessa vape-smaker öppnar dörren till en värld av kulinarisk njutning, var och en med sin egen unika karaktär. Oavsett om du längtar efter något krämigt och förföriskt, friskt och saftigt eller traditionellt och kryddigt, finns det en smakprofil som passar din personliga smakpreferens.",
-        "link_5": "//engangsvapes.html",
+        "link_5": "../../engangsvapes.html",
         "link_5_text": "Kika på våra engångsvapes och deras smaker här",
         "date": "03 aug, 2023",
     }

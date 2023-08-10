@@ -13,9 +13,9 @@
 
 #avHeaderLogo {
   position: fixed;
-  top: 9%;
+  top: 3.5rem;
   left: 50%;
-  transform: translate(-53%, -38%);
+  transform: translate(-53%, 0);
   z-index: 4;
 }
 
