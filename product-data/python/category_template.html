@@ -1,0 +1,41 @@
+{% for product_id, product_data in products %}
+<div class="product-card">
+  {% if product_data.product_discount_price %}
+  <div class="discount-marker">
+    {{ '%.0f'|format(-(1 - product_data.product_discount_price /
+    product_data.product_price) * 100) }}%
+  </div>
+  {% endif %}
+  <img class="product-card-image" src="{{ product_data.product_image }}" />
+  <div class="product-info">
+    <h3 class="product-card-titel">{{ product_data.product_title }}</h3>
+    <p class="product-card-description">
+      {{ product_data.product_description_short }}
+    </p>
+    <div class="product-card-price-box">
+      {% if product_data.product_discount_price %}
+      <p class="product-card-price-overruled">
+        {{ product_data.product_price }}
+      </p>
+      <p class="product-card-price-discount">
+        {{ product_data.product_discount_price }} kr
+      </p>
+      {% else %}
+      <p class="product-card-price">{{ product_data.product_price }} kr</p>
+      {% endif %}
+    </div>
+    <div class="flavor-description-box">
+      <p class="flavor-description-text">{{ product_data.product_flavor }}</p>
+      <div class="flavor-description-button">
+        <div class="icon-box">
+          <ion-icon
+            class="ion-icon flavor-icon"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </div>
+      </div>
+    </div>
+    <button class="buy-button">köp</button>
+  </div>
+</div>
+{% endfor %}

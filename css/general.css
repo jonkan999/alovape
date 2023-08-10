@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10 / 16 = 0,625 percentage of users browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+  line-height: 1;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+}
+
+:root {
+  --main-text-color: #000;
+  --main-background-color: #fff;
+  --nude-background-color: #ffba87;
+  --pink-background-color: #c78c96;
+  --black-background-color: #444444;
+  --highlight-text-color: #af3939;
+
+  --gradient-blue-top: #b1d5f5;
+  --gradient-blue-bot: rgba(217, 226, 233, 0.705);
+
+  --mobile-standard-box-width: 390px;
+  --maximum-allowed-box-width: 944px;
+}
+
+/***************************** */
+/* GENERAL REUSABLE COMPONENTS */
+/***************************** */
+
+.main-white-color {
+  color: var(--main-background-color) !important;
+}
+main {
+  margin-top: 4rem;
+}
+.container {
+  width: 100%;
+  max-width: var(--mobile-standard-box-width);
+  margin: 0 auto;
+  padding: 0 0 0 0.7rem;
+}
+
+.section {
+  margin-bottom: 1rem;
+}
+
+.centered-section {
+  padding: 0 1.7rem 0 1rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
+
+.airy-margin {
+  margin-bottom: 3rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.product-card {
+  position: relative;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem;
+  margin: 1rem 0.5rem;
+}

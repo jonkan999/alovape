@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="se">
+  <head>
+    <script
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      type="module"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer="" src="/js/circleMessages.js"></script>
+    <script defer="" src="/js/loadHeaderLogo.js"></script>
+    <script defer="" src="/js/menu.js"></script>
+    <script defer="" src="/js/fadeHeaderLogo.js"></script>
+    <link href="/css/general.css" rel="stylesheet" />
+    <link href="/css/header.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
+    <link href="/css/popular-products.css" rel="stylesheet" />
+    <link href="/css/menu.css" rel="stylesheet" />
+    <link href="/css/blog.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>{{ article.main_title }}</title>
+    <meta content="{{ article.main_sub_header }}" name="description" />
+  </head>
+  <body>
+    <div class="menu-overlay"></div>
+    <header class="header section">
+      <div id="avHeaderLogo"></div>
+      <div class="header-container">
+        <a class="header-brand-name" href="index.html">alo vape</a>
+        <div class="menu-box">
+          <div class="icon-box">
+            <ion-icon class="ion-icon menu-icon" name="menu-outline"></ion-icon>
+          </div>
+        </div>
+        <!-- Sliding menu -->
+        <div class="menu">
+          <ul>
+            <h3 class="menu-header">Kategorier</h3>
+            <li>
+              <a class="category-link" href="/engangsvapes.html"
+                >Engångsvapes</a
+              >
+            </li>
+            <li>
+              <a class="category-link" href="/energipasar.html">Energipåsar</a>
+            </li>
+            <li>
+              <a class="category-link" href="/disposables.html">Disposables</a>
+            </li>
+            <li>
+              <a class="category-link" href="/nikotinpasar.html"
+                >Nikotinpåsar</a
+              >
+            </li>
+            <li>
+              <a class="category-link" href="/e-cigaretter.html"
+                >E-cigaretter</a
+              >
+            </li>
+            <li>
+              <a class="category-link" href="/cigaretter.html">Cigaretter</a>
+            </li>
+            <li><a class="category-link" href="/e-juice.html">E-juice</a></li>
+            <li>
+              <a class="category-link" href="/startpaket.html">Startpaket</a>
+            </li>
+            <li>
+              <a class="category-link" href="/blog.html">Alo Vape Magazine</a>
+            </li>
+            <li><a class="category-link" href="/merch.html">Merch</a></li>
+          </ul>
+          <div class="icon-box close-button">
+            <ion-icon
+              class="ion-icon close-icon"
+              name="close-outline"
+            ></ion-icon>
+          </div>
+        </div>
+        <div class="remainder-header-box">
+          <div class="icon-box" id="login-button">
+            <ion-icon
+              class="ion-icon main-white-color"
+              name="person-outline"
+            ></ion-icon>
+          </div>
+          <div class="icon-box" id="basket-button">
+            <ion-icon
+              class="ion-icon main-white-color"
+              name="bag-outline"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="messageBox section">
+          <!-- Left and right message boxes content here -->
+        </div>
+        <h1 class="section-header blog-header">{{ article['main_title'] }}</h1>
+        <h2 class="section-header-subtext">{{ article['main_sub_header'] }}</h2>
+        {% for i in range(1, 8) %} {% set image_present = article.get('image_' ~
+        i) %} {% set heading_present = article.get('heading_' ~ i) %} {% set
+        paragraph_present = article.get('paragraph_' ~ i) %} {% set link_present
+        = article.get('link_' ~ i) %}
+
+        <!-- Image -->
+        {% if image_present %}
+        <div class="blog-image-box">
+          <img
+            alt="{{ article.get('image_alt_' ~ i) }}"
+            class="blog-image"
+            src="/{{ article.get('image_' ~ i) }}"
+          />
+          <p class="blog-image-text">{{ article.get('image_title_' ~ i) }}</p>
+        </div>
+        {% endif %}
+
+        <!-- Heading and Paragraph -->
+        {% if article['type'] == "article" and heading_present %}
+        <h2 class="blog-heading">{{ article.get('heading_' ~ i) }}</h2>
+        <p class="blog-paragraph">{{ article.get('paragraph_' ~ i) }}</p>
+        {% elif article['type'] == "listicle" and heading_present %}
+        <h2 class="blog-heading">{{ i }}. {{ article.get('heading_' ~ i) }}</h2>
+        <p class="blog-paragraph">{{ article.get('paragraph_' ~ i) }}</p>
+        {% endif %}
+
+        <!-- Link -->
+        {% if link_present %}
+        <a class="blog-link" href="{{ article.get('link_' ~ i) }}"
+          >{{ article.get('link_' ~ i ~'_text') }}</a
+        >
+        {% endif %} {% endfor %}
+      </div>
+    </main>
+  </body>
+</html>

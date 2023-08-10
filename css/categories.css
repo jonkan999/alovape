@@ -1,0 +1,33 @@
+.category-header {
+  margin-top: 4.5rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.category-description {
+  padding: 0 1rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 500;
+  max-height: 7rem;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  transition: all 0.2s ease-out; /* Add transition for smooth effect */
+}
+
+.expanded {
+  /* Add this class to remove the mask effect when expanded */
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+#expandButton {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+#expandButton ion-icon {
+  width: 2rem;
+}
