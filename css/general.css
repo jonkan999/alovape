@@ -48,6 +48,7 @@ main {
   max-width: var(--mobile-standard-box-width);
   margin: 0 auto;
   padding: 0 0 0 0.7rem;
+  overflow: hidden;
 }
 
 .section {
