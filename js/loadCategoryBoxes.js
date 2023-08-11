@@ -2,15 +2,15 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Sample PNG files for each category button
   const pngFiles = [
-    "resources/png-files/category-1.png",
-    "resources/png-files/category-2.png",
-    "resources/png-files/category-3.png",
-    "resources/png-files/category-4.png",
-    "resources/png-files/category-5.png",
-    "resources/png-files/category-6.png",
-    "resources/png-files/category-7.png",
-    "resources/png-files/category-8.png",
-    "resources/png-files/category-9.png",
+    "resources/png-files/category-1.webp",
+    "resources/png-files/category-2.webp",
+    "resources/png-files/category-3.webp",
+    "resources/png-files/category-4.webp",
+    "resources/png-files/category-5.webp",
+    "resources/png-files/category-6.webp",
+    "resources/png-files/category-7.webp",
+    "resources/png-files/category-8.webp",
+    "resources/png-files/category-9.webp",
     // Add the rest of the PNG files for each category button here
   ];
 

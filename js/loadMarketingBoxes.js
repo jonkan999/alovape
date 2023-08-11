@@ -2,10 +2,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Sample PNG files for each marketing box
   const pngFiles = [
-    "resources/png-files/marketing-1.png",
-    "resources/png-files/marketing-2.png",
-    "resources/png-files/marketing-3.png",
-    "resources/png-files/marketing-4.png",
+    "resources/png-files/marketing-1.webp",
+    "resources/png-files/marketing-2.webp",
+    "resources/png-files/marketing-3.webp",
+    "resources/png-files/marketing-4.webp",
   ];
 
   // Function to load PNG into a marketing box
